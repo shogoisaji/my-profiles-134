@@ -80,7 +80,7 @@ export const TopScreen = () => {
                         lineHeight: '0.9',
                     }}
                 >
-                    SHOGO's
+                    {`SHOGO\'s`}
                     <br />
                     PROFILES
                 </h1>
