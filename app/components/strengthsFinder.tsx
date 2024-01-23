@@ -24,7 +24,10 @@ export const StrengthsFinder = () => {
                 </div>
                 <div className="flex flex-row flex-1 justify-between">
                     {items.map((item: ItemTypes) => (
-                        <div className="flex flex-col  items-center justify-center rounded-xl py-4 md:w-[17%] w-[19%] bg-gray-300">
+                        <div
+                            key={item.item}
+                            className="flex flex-col  items-center justify-center rounded-xl py-4 md:w-[17%] w-[19%] bg-gray-300"
+                        >
                             <p
                                 className={`md:text-xl sm:text-lg text-sm font-bold ${item.color}`}
                             >
