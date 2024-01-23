@@ -1,4 +1,5 @@
 import ContentData from '@/data/portfolioContentData.json'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const Portfolio = () => {
@@ -45,7 +46,7 @@ export const PortfolioContent = ({
                         } grid-flow-col gap-2 md:pb-4 pb-2`}
                     >
                         {content.tools.map((tool: string) => (
-                            <img
+                            <Image
                                 key={tool}
                                 src={`/toolImages/${tool}.png`}
                                 className="md:rounded-xl rounded-lg md:w-[70px] w-[40px]"
@@ -56,7 +57,7 @@ export const PortfolioContent = ({
                 </div>
             </div>
             {content.image && (
-                <img
+                <Image
                     src={`/images/${content.image}`}
                     className="md:rounded-2xl rounded-lg"
                     alt="account"
@@ -65,7 +66,7 @@ export const PortfolioContent = ({
             <div className="flex w-full flex-row justify-end md:p-4 p-2">
                 {content.storeLink && (
                     <Link href={content.storeLink}>
-                        <img
+                        <Image
                             src="/images/app_store.svg"
                             className="md:mr-4 mr-2 md:h-12 h-8"
                             alt="account"

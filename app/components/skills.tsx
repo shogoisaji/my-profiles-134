@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const Skills = () => {
     return (
         <div className="flex flex-row items-center justify-center p-8 h-60 bg-custom-green">
@@ -9,7 +11,7 @@ export const Skills = () => {
                     <h1 className="md:text-3xl text-2xl font-semibold">
                         取得資格
                     </h1>
-                    <img
+                    <Image
                         src="/images/aws_saa.webp"
                         className="w-32 mt-3"
                         alt="aws"
@@ -29,37 +31,45 @@ export const Skills = () => {
                     </div>
                 </div>
                 <div className="flex-col flex-1 w-32 relative md:block hidden">
-                    <img
+                    <Image
                         src="/toolImages/laravel.png"
                         className="absolute top-32 left-2 -rotate-12 w-12 rounded-md"
+                        alt="laravel"
                     />
-                    <img
+                    <Image
                         src="/toolImages/gcp.png"
                         className="absolute top-32 left-24 -rotate-4 w-12 rounded-md"
+                        alt="gcp"
                     />
-                    <img
+                    <Image
                         src="/toolImages/react.png"
                         className="absolute top-0 left-16 rotate-12 w-12 rounded-md"
+                        alt="react"
                     />
-                    <img
+                    <Image
                         src="/toolImages/nextjs.png"
                         className="absolute top-4 left-0 -rotate-12 w-12 rounded-md"
+                        alt="nextjs"
                     />
-                    <img
+                    <Image
                         src="/toolImages/typescript.png"
                         className="absolute top-20 left-0 rotate-6 w-12 rounded-md"
+                        alt="typescript"
                     />
-                    <img
+                    <Image
                         src="/toolImages/supabase.png"
                         className="absolute top-28 left-14 rotate-6 w-12 rounded-md"
+                        alt="supabase"
                     />
-                    <img
+                    <Image
                         src="/toolImages/firebase.png"
                         className="absolute top-16 left-20 -rotate-12 w-12 rounded-md"
+                        alt="firebase"
                     />
-                    <img
+                    <Image
                         src="/toolImages/flutter.png"
                         className="absolute top-12 left-8 -rotate-6 w-12 rounded-md"
+                        alt="flutter"
                     />
                 </div>
             </div>

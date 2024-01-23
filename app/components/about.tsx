@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const About = () => {
@@ -8,7 +9,7 @@ export const About = () => {
             </div>
             <div className="flex flex-row justify-center items-center ml-6">
                 <div className="flex flex-col justify-center items-center mr-10">
-                    <img
+                    <Image
                         src="/images/account-image.png"
                         className="w-32"
                         alt="account"
@@ -17,21 +18,21 @@ export const About = () => {
                     {/* link icons */}
                     <div className="flex flex-row w-32 justify-between">
                         <Link href="https://github.com/shogoisaji">
-                            <img
+                            <Image
                                 src="/images/github.png"
                                 className="w-8 h-8 hover:rotate-6 hover:scale-105"
                                 alt="github"
                             />
                         </Link>
                         <Link href="https://zenn.dev/s134">
-                            <img
+                            <Image
                                 src="/images/zenn.png"
                                 className="w-8 h-8 hover:rotate-6 hover:scale-105"
                                 alt="zenn"
                             />
                         </Link>
                         <Link href="https://twitter.com/_isaji134">
-                            <img
+                            <Image
                                 src="/images/x.png"
                                 className="w-8 h-8 hover:rotate-6 hover:scale-105"
                                 alt="x"

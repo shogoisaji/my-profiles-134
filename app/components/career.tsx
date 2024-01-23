@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const Career = () => {
     return (
         <div className="flex flex-col justify-center items-center py-4">
@@ -24,7 +26,7 @@ export const Career = () => {
                     </div>
                 </div>
                 <div className="flex flex-col flex-1 justify-center">
-                    <img
+                    <Image
                         src="/images/career1.png"
                         className="md:rounded-2xl rounded-xl"
                         alt="career1"
@@ -56,7 +58,7 @@ export const Career = () => {
                     </div>
                 </div>
                 <div className="flex flex-col flex-1 justify-center">
-                    <img
+                    <Image
                         src="/images/career2.png"
                         className="md:rounded-2xl rounded-xl"
                         alt="career1"
