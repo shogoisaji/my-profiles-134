@@ -15,7 +15,7 @@ const config: Config = {
             },
             colors: {
                 'custom-green': '#5C967A',
-                // 他のカスタムカラー...
+                'custom-yellow': '#F1DBA3',
             },
         },
     },

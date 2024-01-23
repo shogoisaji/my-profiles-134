@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export const TopScreen = () => {
     return (
-        <div className="flex shrink-0 md:h-screen h-[70vh] justify-center items-center text-gray-600 bg-amber-200">
+        <div className="flex shrink-0 md:h-screen h-[70vh] justify-center items-center text-gray-600 bg-custom-yellow">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -28,8 +28,8 @@ export const TopScreen = () => {
                         className="border border-gray-600 rounded-full"
                         style={{
                             borderRadius: '50%',
-                            height: '30vw',
-                            width: '70vw',
+                            height: '25vw',
+                            width: '75vw',
                         }}
                     />
                 </motion.div>
@@ -48,8 +48,8 @@ export const TopScreen = () => {
                         className="border border-gray-600 rounded-full"
                         style={{
                             borderRadius: '50%',
-                            height: '30vw',
-                            width: '70vw',
+                            height: '25vw',
+                            width: '75vw',
                         }}
                     />
                 </motion.div>
@@ -68,8 +68,8 @@ export const TopScreen = () => {
                         className="border border-gray-600 rounded-full"
                         style={{
                             borderRadius: '50%',
-                            height: '30vw',
-                            width: '70vw',
+                            height: '25vw',
+                            width: '75vw',
                         }}
                     />
                 </motion.div>
@@ -80,7 +80,7 @@ export const TopScreen = () => {
                         lineHeight: '0.9',
                     }}
                 >
-                    MY
+                    SHOGO's
                     <br />
                     PROFILES
                 </h1>

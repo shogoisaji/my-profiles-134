@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const Portfolio = () => {
     return (
-        <div className="flex flex-col items-center justify-center p-4 bg-gray-600">
+        <div className="flex flex-col items-center justify-center p-4">
             <div className="fixed left-0 -rotate-90">
                 <h1 className="text-5xl font-bold">Portfolio</h1>
             </div>
@@ -26,14 +26,25 @@ export const PortfolioContent = ({
     content: PortfolioContent
 }) => {
     return (
-        <div className="flex flex-col items-center w-[100%] max-w-[800px]">
-            <div className="flex md:flex-row flex-col md:items-end items-start justify-between md:px-4 px-1 w-full">
+        <div className="flex flex-col items-center py-8 w-[100%] max-w-[800px] relative">
+            <div
+                className="absolute top-32 border-2 border-gray-500 opacity-50 rounded-full md:block hidden"
+                style={{
+                    rotate: '35deg',
+                    borderRadius: '50%',
+                    height: '35vw',
+                    width: '85vw',
+                }}
+            />
+            <div className="flex md:flex-row flex-col md:items-end items-start justify-between z-10 md:px-4 px-1 w-full">
                 <div className="flex flex-col w-full md:pb-4 pb-2 md:pr-4 pr-0">
-                    <h1 className="text-xl">{content.subtitle}</h1>
-                    <h1 className="md:text-5xl text-3xl font-bold">
+                    <h1 className="text-xl text-custom-yellow">
+                        {content.subtitle}
+                    </h1>
+                    <h1 className="md:text-5xl text-3xl font-bold text-custom-yellow">
                         {content.title}
                     </h1>
-                    <p className="md:text-xl text-lg md:mt-4 mt-2">
+                    <p className="md:text-xl text-lg md:mt-3 mt-2">
                         {content.description}
                     </p>
                 </div>
@@ -51,6 +62,8 @@ export const PortfolioContent = ({
                                 src={`/toolImages/${tool}.png`}
                                 className="md:rounded-xl rounded-lg md:w-[70px] w-[40px]"
                                 alt="tool"
+                                width={70}
+                                height={70}
                             />
                         ))}
                     </div>
@@ -59,17 +72,21 @@ export const PortfolioContent = ({
             {content.image && (
                 <Image
                     src={`/images/${content.image}`}
-                    className="md:rounded-2xl rounded-lg"
+                    className="md:rounded-2xl rounded-lg z-10"
                     alt="account"
+                    width={800}
+                    height={600}
                 />
             )}
-            <div className="flex w-full flex-row justify-end md:p-4 p-2">
+            <div className="flex w-full flex-row justify-end md:p-4 p-2 z-10">
                 {content.storeLink && (
                     <Link href={content.storeLink}>
                         <Image
                             src="/images/app_store.svg"
                             className="md:mr-4 mr-2 md:h-12 h-8"
                             alt="account"
+                            width={120}
+                            height={40}
                         />
                     </Link>
                 )}
