@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Kaachan",
+        "subtitle": "学習記録監視アプリ",
+        "description": "3rdリリースアプリ🚀初めてReactNativeを使用して作成。学習習慣を付けてもらえたらと思い作成しました。学習状況に応じて『か〜ちゃん』の表情が変化します。",
+        "image": "kaachan_image.png",
+        "tools": ["react", "typescript"],
+        "detailLink": "https://kaachan-lp.vercel.app/",
+        "storeLink": "https://apps.apple.com/app/kaachan/id6476092582"
+    },
+    {
+        "title": "GuiMe",
+        "subtitle": "ナビゲーションアプリ",
+        "description": "2ndリリースアプリ🚀Flutterを使用して作成。現在地を登録→出掛ける→登録地点へ戻る  駐車場、集合地点、よく行く場所などで活用できるアプリです。",
+        "image": "guime_image.png",
+        "tools": ["flutter", "gcp"],
+        "detailLink": "https://guime-web.vercel.app/",
+        "storeLink": "https://apps.apple.com/jp/app/guime/id6474927868"
+    },
+    {
+        "title": "Tumitas",
+        "subtitle": "タスク振り返りアプリ",
+        "description": "初のリリースアプリ🚀Flutterを使用して作成。完了したタスクをブロックにし、積んで振り返るアプリです。",
+        "image": "tumitas_image.png",
+        "tools": ["flutter"],
+        "detailLink": "https://lp-tumitas-shogoisaji.vercel.app/",
+        "storeLink": "https://apps.apple.com/jp/app/tumitas/id6473894707"
+    },
+    {
+        "title": "Calasol",
+        "subtitle": "カラーセレクトアプリ",
+        "description": "Flutterを使用して作成。どのようなカラーを使おうか迷っている際に、役立つアプリです。ランダムや配列からカラーを選択し、カラーコードの取得が出来ます。作成期間:10日",
+        "image": "colasol_image.png",
+        "tools": ["flutter"],
+        "detailLink": "https://github.com/shogoisaji/colasol#readme",
+        "storeLink": ""
+    },
+    {
+        "title": "BookRental",
+        "subtitle": "書籍レンタルシステム",
+        "description": "Laravelを使用し作成。管理者のみ書籍を登録を行える。一覧より書籍を選択し、レンタル、コメントの入力ができる。DBはsupabaseのRDBを使用した。作成期間:3日",
+        "image": "bms_image.png",
+        "tools": ["laravel", "supabase"],
+        "detailLink": "https://github.com/shogoisaji/BookMamagementSystem/tree/main#readme",
+        "storeLink": ""
+    },
+    {
+        "title": "BicycleRental",
+        "subtitle": "自転車レンタルアプリ",
+        "description": "Flutterを使用し作成。email又はgoogleでログインし、自転車、期間を選択しレンタルする。adminは登録、編集、履歴の確認ができる。状態管理はgetXを使用した。作成期間:14日",
+        "image": "br_image.png",
+        "tools": ["flutter", "firebase"],
+        "detailLink": "https://github.com/shogoisaji/bicycle_rental_system/#readme",
+        "storeLink": ""
+    },
+    {
+        "title": "Worbbing",
+        "subtitle": "英単語復習アプリ",
+        "description": "Flutterを使用し作成。エビングハウスの忘却曲線に基づき、復習タイミングを適切に管理し、英単語の定着を助ける。作成期間:10日",
+        "image": "worbbing_image.png",
+        "tools": ["flutter"],
+        "detailLink": "https://myprofilepoliteku03.framer.ai/worbbing",
+        "storeLink": ""
+    },
+    {
+        "title": "Travel Canvas",
+        "subtitle": "旅の記録アプリ",
+        "description": "Flutterを使用し作成。google map APIを使い写真とmapを連携することで、より旅の記憶を深くする。作成期間:10日",
+        "image": "travel_canvas_image.png",
+        "tools": ["flutter", "firebase", "gcp"],
+        "detailLink": "https://myprofilepoliteku03.framer.ai/travel_canvas",
+        "storeLink": ""
+    },
+    {
+        "title": "InventoryManagement",
+        "subtitle": "在庫管理アプリ",
+        "description": "Flutter、Firebase を使用。商品の入出庫、写真を撮影し商品登録、アカウント管理により商品と作業者の関連付けを行える。",
+        "image": "ims_image.png",
+        "tools": ["flutter", "firebase"],
+        "detailLink": "https://inventory-system-6bc22.web.app/#/sign-in",
+        "storeLink": ""
+    },
+    {
+        "title": "Tree Typing",
+        "subtitle": "タイピング練習アプリ",
+        "description": "HTML/CSS/JavaScriptを使用し制作。英数字を混ぜたタイピングの練習ができ、モードを変えれば英単語の学習にも使用できます。",
+        "image": "typing_tree_image.png",
+        "tools": ["javascript"],
+        "detailLink": "https://treetyping.vercel.app/",
+        "storeLink": ""
+    }
+]
