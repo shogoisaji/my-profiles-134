@@ -4,6 +4,6 @@ type PortfolioContent = {
     description: string
     image: string
     tools: string[]
-    detailLink?: string
+    detailLink: string
     storeLink?: string
 }

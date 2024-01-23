@@ -72,7 +72,7 @@
         "storeLink": ""
     },
     {
-        "title": "InventoryManagement",
+        "title": "Inventory Management",
         "subtitle": "在庫管理アプリ",
         "description": "Flutter、Firebase を使用。商品の入出庫、写真を撮影し商品登録、アカウント管理により商品と作業者の関連付けを行える。",
         "image": "ims_image.png",
