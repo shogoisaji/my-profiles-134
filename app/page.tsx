@@ -69,7 +69,7 @@ export default function Page() {
         return () => {
             window.removeEventListener('scroll', setCurrentPositionHandler)
         }
-    }, [window.scrollY])
+    }, [setCurrentPositionHandler])
     return (
         <main className="flex min-h-screen flex-col ">
             <div className="fixed top-0 left-0 w-screen h-screen bg-gray-600 -z-100" />
