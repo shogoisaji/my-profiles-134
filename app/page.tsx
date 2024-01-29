@@ -18,7 +18,9 @@ export default function Page() {
 
     const { screenPositions } = useScreenPositionsStore()
 
-    const offset: number = window.innerHeight / 2
+    const [windowHeight, setWindowHeight] = useState(0)
+
+    const offset: number = windowHeight / 2
 
     const setCurrentPositionHandler = () => {
         console.log(offset)
@@ -57,6 +59,7 @@ export default function Page() {
         }
     }
     useEffect(() => {
+        setWindowHeight(window.innerHeight)
         setIsChange(true)
         setTimeout(() => setIsChange(false), 700)
     }, [currentScreenName])
