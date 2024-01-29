@@ -2,6 +2,7 @@
 
 import { About } from '@/app/components/about'
 import { Career } from '@/app/components/career'
+import { Hobbies } from '@/app/components/hobbies'
 import { Portfolio } from '@/app/components/portfolio'
 import { Skills } from '@/app/components/skills'
 import { SplineComponent } from '@/app/components/spline'
@@ -40,28 +41,28 @@ export default function Page() {
             window.scrollY + offset < screenPositions.portfolio
         ) {
             setCurrentScreenName('career')
-            setBgColor('bg-blue-700')
+            setBgColor('bg-custom-darkBlue')
             console.log('career')
         } else if (
             window.scrollY + offset > screenPositions.portfolio &&
             window.scrollY + offset < screenPositions.skills
         ) {
             setCurrentScreenName('portfolio')
-            setBgColor('bg-gray-700')
+            setBgColor('bg-custom-darkGreen')
             console.log('portfolio')
         } else if (
             window.scrollY + offset > screenPositions.skills &&
             window.scrollY + offset < screenPositions.hobbies
         ) {
             setCurrentScreenName('skills')
-            setBgColor('bg-gray-800')
+            setBgColor('bg-custom-blown')
             console.log('skills')
         }
     }
     useEffect(() => {
         setWindowHeight(window.innerHeight)
         setIsChange(true)
-        setTimeout(() => setIsChange(false), 700)
+        setTimeout(() => setIsChange(false), 1000)
     }, [currentScreenName])
 
     useEffect(() => {
@@ -76,14 +77,14 @@ export default function Page() {
             <motion.div
                 initial={{ opacity: 1 }}
                 animate={
-                    isChange ? { opacity: [0.8, 0.7, 0.9] } : { opacity: 1 }
+                    isChange ? { opacity: [0.7, 0.5, 0.7] } : { opacity: 1 }
                 }
                 transition={{
-                    opacity: { duration: 0.7 },
+                    opacity: { duration: 1 },
                 }}
                 className={`${bgColor}  fixed top-0 left-0 w-screen h-screen`}
             ></motion.div>
-            <div>
+            <div className="z-10">
                 <div className="fixed text-xl text-red-400">
                     {currentScreenName}
                 </div>
@@ -92,7 +93,7 @@ export default function Page() {
                 <Career />
                 <Portfolio />
                 <Skills />
-                <StrengthsFinder />
+                <Hobbies />
                 <SplineComponent />
             </div>
         </main>

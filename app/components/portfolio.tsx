@@ -20,11 +20,8 @@ export const Portfolio = () => {
     return (
         <div
             ref={ref}
-            className="flex flex-col items-center justify-center p-4"
+            className="flex flex-col items-center justify-center py-40"
         >
-            <div className="absolute flex w-full flex-row justify-start">
-                <h1 className="text-6xl ml-28 z-10 font-bold">Portfolio</h1>
-            </div>
             {ContentData.map((data: PortfolioContent) => (
                 <div
                     key={data.title}
@@ -45,7 +42,7 @@ export const PortfolioContent = ({
     return (
         <div className="flex flex-col items-center py-8 w-[100%] max-w-[800px] relative">
             <div
-                className="absolute top-32 border-2 border-gray-500 opacity-50 rounded-full md:block hidden"
+                className="absolute top-32 border-2 border-gray-600 opacity-50 rounded-full md:block hidden"
                 style={{
                     rotate: '35deg',
                     borderRadius: '50%',

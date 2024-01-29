@@ -1,3 +1,4 @@
+import { StrengthsFinder } from '@/app/components/strengthsFinder'
 import { useOffsetTop } from '@/app/customHooks/useOffsetTop'
 import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import Image from 'next/image'
@@ -15,14 +16,11 @@ export const Skills = () => {
     return (
         <div
             ref={ref}
-            className="flex flex-row items-center justify-center p-8 h-60"
+            className="flex flex-col items-center justify-center py-40 h-60"
         >
-            <div className="absolute left-0 -rotate-90 md:block hidden">
-                <h1 className="text-5xl font-bold">Skills</h1>
-            </div>
             <div className="flex flex-row justify-center">
                 <div className="flex flex-col h-full md:mr-16 mr-8 items-center justify-start">
-                    <h1 className="md:text-3xl text-2xl font-semibold text-gray-700">
+                    <h1 className="md:text-3xl text-2xl font-semibold text-gray-200">
                         取得資格
                     </h1>
                     <Image
@@ -34,7 +32,7 @@ export const Skills = () => {
                     />
                 </div>
                 <div className="flex flex-col h-full md:mr-12 items-start justify-start">
-                    <h1 className="md:text-3xl text-2xl font-semibold text-gray-700">
+                    <h1 className="md:text-3xl text-2xl font-semibold text-gray-200">
                         学習中
                     </h1>
                     <div className="ml-5 mt-3">
@@ -105,6 +103,7 @@ export const Skills = () => {
                     />
                 </div>
             </div>
+            <StrengthsFinder />
         </div>
     )
 }

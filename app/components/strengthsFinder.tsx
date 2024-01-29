@@ -11,7 +11,7 @@ export const StrengthsFinder = () => {
         { item: '自己確信', color: 'text-purple-700' },
     ]
     return (
-        <div className="flex flex-row justify-center items-center py-4 bg-gray-800">
+        <div className="flex flex-row justify-center items-center py-4 ">
             <div className="flex flex-col justify-center w-[100%] max-w-[800px] p-4 mb-4">
                 <div className="flex flex-col flex-1 items-start">
                     <div className="md:text-4xl text-3xl font-bold">

@@ -17,11 +17,8 @@ export const About = () => {
     return (
         <div
             ref={ref}
-            className="flex items-center justify-center md:py-20 py-12 relative"
+            className="flex items-center justify-center md:py-40 py-12 relative"
         >
-            <div className="absolute left-0 -rotate-90 md:block hidden">
-                <h1 className="text-5xl font-bold">ABOUT</h1>
-            </div>
             <div className="flex flex-row justify-center items-center ml-6">
                 <div className="flex flex-col justify-center items-center mr-10">
                     <Image

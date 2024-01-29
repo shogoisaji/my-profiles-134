@@ -17,9 +17,6 @@ export const Career = () => {
             ref={ref}
             className="flex flex-col justify-center items-center py-8 relative"
         >
-            <div className="absolute top-0 left-0 md:block hidden">
-                <h1 className="text-5xl font-bold -rotate-90">CAREER</h1>
-            </div>
             {/* career1 */}
             <div className="flex md:flex-row flex-col justify-center w-[100%] max-w-[800px] p-8 mb-6 bg-black bg-opacity-10 rounded-3xl">
                 <div className="flex flex-col flex-1 items-start">
@@ -39,7 +36,7 @@ export const Career = () => {
                         <p className="md:text-xl text-lg ml-2">
                             幌、カバー、テント、等の帆布製品
                         </p>
-                        <p className="md:text-3xl text-xl font-semibold md:mt-4 mt-2 text-gray-500">
+                        <p className="md:text-3xl text-xl font-semibold md:mt-8 mt-4 text-gray-400">
                             7年4ヶ月{' '}
                             <span className="md:text-2xl">2015~2023</span>
                         </p>
@@ -74,7 +71,7 @@ export const Career = () => {
                         <p className="md:text-xl text-lg ml-2">
                             食品包材、工業用フィルム
                         </p>
-                        <p className="md:text-3xl text-xl font-semibold md:mt-4 mt-2 text-gray-500">
+                        <p className="md:text-3xl text-xl font-semibold md:mt-8 mt-4 text-gray-400">
                             5年7ヶ月{' '}
                             <span className="md:text-2xl">2010~2015</span>
                         </p>
