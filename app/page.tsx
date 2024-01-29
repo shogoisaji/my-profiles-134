@@ -8,36 +8,37 @@ import { SplineComponent } from '@/app/components/spline'
 import { StrengthsFinder } from '@/app/components/strengthsFinder'
 import { TopScreen } from '@/app/components/top-screen'
 import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 export default function Page() {
-    const [currentPosition, setCurrentPosition] = useState(0)
+    const [isChange, setIsChange] = useState(false)
     const [currentScreenName, setCurrentScreenName] = useState('top')
-    const [bgColor, setBgColor] = useState('bg-gray-700')
+    const [bgColor, setBgColor] = useState('bg-custom-yellow')
 
     const { screenPositions } = useScreenPositionsStore()
 
     const offset: number = window.innerHeight / 2
 
     const setCurrentPositionHandler = () => {
-        setCurrentPosition(window.scrollY)
+        console.log(offset)
         if (window.scrollY + offset < screenPositions.about) {
             setCurrentScreenName('top')
-            setBgColor('bg-gray-400')
+            setBgColor('bg-custom-yellow')
             console.log('top')
         } else if (
             window.scrollY + offset > screenPositions.about &&
             window.scrollY + offset < screenPositions.career
         ) {
             setCurrentScreenName('about')
-            setBgColor('bg-gray-500')
+            setBgColor('bg-custom-green')
             console.log('about')
         } else if (
             window.scrollY + offset > screenPositions.career &&
             window.scrollY + offset < screenPositions.portfolio
         ) {
             setCurrentScreenName('career')
-            setBgColor('bg-gray-600')
+            setBgColor('bg-blue-700')
             console.log('career')
         } else if (
             window.scrollY + offset > screenPositions.portfolio &&
@@ -54,10 +55,11 @@ export default function Page() {
             setBgColor('bg-gray-800')
             console.log('skills')
         }
-        //  else if (window.scrollY > screenPositions.hobbies) {
-        //     console.log('hobbies')
-        // }
     }
+    useEffect(() => {
+        setIsChange(true)
+        setTimeout(() => setIsChange(false), 700)
+    }, [currentScreenName])
 
     useEffect(() => {
         window.addEventListener('scroll', setCurrentPositionHandler)
@@ -66,7 +68,18 @@ export default function Page() {
         }
     }, [window.scrollY])
     return (
-        <main className={`flex min-h-screen flex-col ${bgColor}`}>
+        <main className="flex min-h-screen flex-col ">
+            <div className="fixed top-0 left-0 w-screen h-screen bg-gray-600 -z-100" />
+            <motion.div
+                initial={{ opacity: 1 }}
+                animate={
+                    isChange ? { opacity: [0.8, 0.7, 0.9] } : { opacity: 1 }
+                }
+                transition={{
+                    opacity: { duration: 0.7 },
+                }}
+                className={`${bgColor}  fixed top-0 left-0 w-screen h-screen`}
+            ></motion.div>
             <div>
                 <div className="fixed text-xl text-red-400">
                     {currentScreenName}

@@ -1,3 +1,5 @@
+'use client'
+
 import { useThrottle } from '@/app/customHooks/useThrottle'
 import React, { useEffect, useState, useCallback } from 'react'
 

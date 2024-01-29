@@ -17,7 +17,7 @@ export const About = () => {
     return (
         <div
             ref={ref}
-            className="flex items-center justify-center py-8 relative"
+            className="flex items-center justify-center md:py-20 py-12 relative"
         >
             <div className="absolute left-0 -rotate-90 md:block hidden">
                 <h1 className="text-5xl font-bold">ABOUT</h1>

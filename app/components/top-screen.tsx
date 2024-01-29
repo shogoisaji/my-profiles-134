@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export const TopScreen = () => {
     return (
-        <div className="flex shrink-0 md:h-screen h-[70vh] justify-center items-center text-gray-600 bg-custom-yellow">
+        <div className="flex shrink-0 h-screen justify-center items-center text-gray-600">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -74,7 +74,7 @@ export const TopScreen = () => {
                     />
                 </motion.div>
                 <h1
-                    className="text-center font-black text-gray-600"
+                    className="text-center font-black text-gray-600 z-10"
                     style={{
                         fontSize: '12vw',
                         lineHeight: '0.9',
