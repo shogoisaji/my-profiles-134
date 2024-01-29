@@ -1,12 +1,29 @@
+'use client'
+
+import { useOffsetTop } from '@/app/customHooks/useOffsetTop'
+import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import ContentData from '@/data/portfolioContentData.json'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 
 export const Portfolio = () => {
+    const ref = useRef(null)
+    const { viewportTop = 0, pageOffsetTop = 0 } = useOffsetTop(ref)
+
+    useEffect(() => {
+        useScreenPositionsStore
+            .getState()
+            .setScreenPositions({ portfolio: pageOffsetTop })
+    }, [pageOffsetTop])
+
     return (
-        <div className="flex flex-col items-center justify-center p-4">
-            <div className="fixed left-0 -rotate-90">
-                <h1 className="text-5xl font-bold">Portfolio</h1>
+        <div
+            ref={ref}
+            className="flex flex-col items-center justify-center p-4"
+        >
+            <div className="absolute flex w-full flex-row justify-start">
+                <h1 className="text-6xl ml-28 z-10 font-bold">Portfolio</h1>
             </div>
             {ContentData.map((data: PortfolioContent) => (
                 <div

@@ -1,8 +1,22 @@
+import { useOffsetTop } from '@/app/customHooks/useOffsetTop'
+import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import Image from 'next/image'
+import { useEffect, useRef } from 'react'
 
 export const Skills = () => {
+    const ref = useRef(null)
+    const { viewportTop = 0, pageOffsetTop = 0 } = useOffsetTop(ref)
+
+    useEffect(() => {
+        useScreenPositionsStore
+            .getState()
+            .setScreenPositions({ skills: pageOffsetTop })
+    }, [pageOffsetTop])
     return (
-        <div className="flex flex-row items-center justify-center p-8 h-60 bg-custom-green">
+        <div
+            ref={ref}
+            className="flex flex-row items-center justify-center p-8 h-60"
+        >
             <div className="absolute left-0 -rotate-90 md:block hidden">
                 <h1 className="text-5xl font-bold">Skills</h1>
             </div>
