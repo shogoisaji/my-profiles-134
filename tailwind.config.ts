@@ -17,7 +17,7 @@ const config: Config = {
                 'custom-green': '#5C967A',
                 'custom-yellow': '#F1DBA3',
                 'custom-blue': '#A1CCD1',
-                'custom-blown': '#7E6363',
+                'custom-blown': '#7A5B51',
                 'custom-darkBlue': '#474F7A',
                 'custom-darkGreen': '#43766C',
             },

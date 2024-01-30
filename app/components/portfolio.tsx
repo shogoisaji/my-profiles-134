@@ -8,8 +8,25 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
 export const Portfolio = () => {
-    const ref = useRef(null)
+    const ref = useRef<HTMLDivElement>(null)
     const { viewportTop = 0, pageOffsetTop = 0 } = useOffsetTop(ref)
+    const [componentHeight, setComponentHeight] = useState(0)
+
+    useEffect(() => {
+        const updateHeight = () => {
+            if (ref.current) {
+                setComponentHeight(ref.current.clientHeight)
+                console.log('h', ref.current.clientHeight)
+            }
+        }
+        window.addEventListener('resize', updateHeight)
+        // 初期値を設定
+        updateHeight()
+        // クリーンアップ関数
+        return () => {
+            window.removeEventListener('resize', updateHeight)
+        }
+    }, [])
 
     useEffect(() => {
         useScreenPositionsStore
@@ -22,6 +39,9 @@ export const Portfolio = () => {
             ref={ref}
             className="flex flex-col items-center justify-center py-40"
         >
+            <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-5xl md:ml-24  font-bold text-custom-darkBlue">
+                Portfolio
+            </h1>
             {ContentData.map((data: PortfolioContent) => (
                 <div
                     key={data.title}

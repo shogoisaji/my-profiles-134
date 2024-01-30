@@ -21,6 +21,13 @@ export const StrengthsFinder = () => {
                         Strengths Finderとは
                         Gallup社による個人が強みの素になる「才能」を見つけ、成果につなげる方法を身に付けるための診断です。
                     </p>
+                    <div className="flex flex-row items-center justify-center w-full  py-2">
+                        <div className="bg-gray-200 w-full h-[2px]" />
+                        <p className="flex flex-row w-60 px-2 justify-center md:text-xl text-md text-gray-200">
+                            私の資質
+                        </p>
+                        <div className="bg-gray-200 w-full h-[2px]" />
+                    </div>
                 </div>
                 <div className="flex flex-row flex-1 justify-between">
                     {items.map((item: ItemTypes) => (

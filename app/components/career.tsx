@@ -17,6 +17,9 @@ export const Career = () => {
             ref={ref}
             className="flex flex-col justify-center items-center py-8 relative"
         >
+            <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-5xl md:ml-24 md:mb-12 mb-4 font-bold text-custom-green">
+                Career
+            </h1>
             {/* career1 */}
             <div className="flex md:flex-row flex-col justify-center w-[100%] max-w-[800px] p-8 mb-6 bg-black bg-opacity-10 rounded-3xl">
                 <div className="flex flex-col flex-1 items-start">

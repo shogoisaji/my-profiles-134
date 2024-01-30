@@ -25,11 +25,11 @@ export const Skills = () => {
                         学習中
                     </h1>
                     <div className="ml-5 mt-3">
-                        <ul className="list-disc md:text-2xl text-lg">
-                            <li>Flutter</li>
-                            <li>React Native</li>
-                            <li>React</li>
-                            <li>Next.js</li>
+                        <ul className="list-disc md:text-2xl text-lg font-semibold">
+                            <li className="text-blue-200">Flutter</li>
+                            <li className="text-red-200">React Native</li>
+                            <li className="text-yellow-200">React</li>
+                            <li className="text-fuchsia-200">Next.js</li>
                         </ul>
                     </div>
                 </div>

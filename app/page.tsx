@@ -4,14 +4,13 @@ import { About } from '@/app/components/about'
 import { Career } from '@/app/components/career'
 import { Footer } from '@/app/components/footer'
 import { Portfolio } from '@/app/components/portfolio'
-import { Skills } from '@/app/components/skills'
-import { SplineComponent } from '@/app/components/spline'
 import { TopScreen } from '@/app/components/top-screen'
 import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 export default function Page() {
+    const [scrollPosition, setScrollPosition] = useState<number>(0)
     const [isChange, setIsChange] = useState(false)
     const [currentScreenName, setCurrentScreenName] = useState('top')
     const [bgColor, setBgColor] = useState('bg-custom-yellow')
@@ -24,6 +23,7 @@ export default function Page() {
     const offset: number = windowHeight / 2
 
     const setCurrentPositionHandler = () => {
+        setScrollPosition(window.scrollY)
         if (window.scrollY + offset < screenPositions.about) {
             setCurrentScreenName('top')
             setBgColor('bg-custom-yellow')
@@ -55,18 +55,8 @@ export default function Page() {
         setWindowHeight(window.innerHeight)
         setIsChange(true)
         setTimeout(() => setIsChange(false), 500)
-        console.log('bgColor')
-        // setPrevBgColor(bgColor)
         setTimeout(() => setPrevBgColor(bgColor), 500)
-        console.log(bgColor)
-        console.log(prevBgColor)
     }, [bgColor])
-
-    // useEffect(() => {
-    //     setWindowHeight(window.innerHeight)
-    //     setIsChange(true)
-    //     setTimeout(() => setIsChange(false), 500)
-    // }, [currentScreenName])
 
     useEffect(() => {
         window.addEventListener('scroll', setCurrentPositionHandler)
@@ -75,9 +65,14 @@ export default function Page() {
         }
     }, [setCurrentPositionHandler])
     return (
-        <main className={`flex min-h-screen flex-col px-4`}>
+        <main className="flex flex-col px-4">
+            {/* <div
+                className="absolute top-[500px] text-3xl font-bold text-red-400 z-50 bg-white bg-opacity-50"
+            >
+                {currentScreenName}
+            </div> */}
             <div
-                className={`fixed top-0 left-0 w-screen h-screen -z-50 ${prevBgColor}`}
+                className={`fixed top-0 left-0 w-full h-full -z-50 ${prevBgColor}`}
             />
             <motion.div
                 initial={{ opacity: 0 }}
@@ -85,7 +80,7 @@ export default function Page() {
                 transition={{
                     opacity: { duration: 0.5 },
                 }}
-                className={`${bgColor}  fixed top-0 left-0 w-screen min-h-screen -z-10`}
+                className={`${bgColor}  fixed top-0 left-0 w-full h-full -z-10`}
             ></motion.div>
 
             <TopScreen />
@@ -93,14 +88,6 @@ export default function Page() {
             <Career />
             <Portfolio />
             <Footer />
-            <SplineComponent />
-            <div className="fixed text-3xl font-bold text-red-400 z-50">
-                {currentScreenName}
-                <br />
-                {bgColor}
-                <br />
-                {prevBgColor}
-            </div>
         </main>
     )
 }
