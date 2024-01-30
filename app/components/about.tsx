@@ -3,7 +3,6 @@ import { Sns } from '@/app/components/sns'
 import { useOffsetTop } from '@/app/customHooks/useOffsetTop'
 import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 
 export const About = () => {
@@ -41,7 +40,7 @@ export const About = () => {
                 </div>
                 <div className="flex flex-col items-center justify-center md:w-[50%] flex-1 md:flex-initial md:mb-6">
                     <p className="md:text-xl mt-4">
-                        情報工学系の大学を卒業後、IT系を目指すも叶わず町工場へ就職。マシンオペレータとして働くが、ものづくりの上流の職に興味を持ち、設計職へ転職。企画、開発、設計、生産管理を経験し、お客様に対し如何に価値を提供し、満足して頂くことが大切かを学ぶ。現在は、自分にしか生み出せない価値を生産するため自己を磨いています。ありがとうを求めて！
+                        情報工学系の大学を卒業後、IT系を目指すも叶わず町工場へ就職。マシンオペレータとして働くが、ものづくりの上流の職に興味を持ち、設計職へ転職。企画、開発、設計、生産管理を経験し、お客様に対し如何に価値を提供し、満足して頂くことが大切かを学ぶ。現在は、自分にしか生み出せない価値を生産するため自己を磨いています。
                     </p>
                 </div>
             </div>

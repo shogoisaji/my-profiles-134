@@ -66,13 +66,8 @@ export default function Page() {
     }, [setCurrentPositionHandler])
     return (
         <main className="flex flex-col px-4">
-            {/* <div
-                className="absolute top-[500px] text-3xl font-bold text-red-400 z-50 bg-white bg-opacity-50"
-            >
-                {currentScreenName}
-            </div> */}
             <div
-                className={`fixed top-0 left-0 w-full h-full -z-50 ${prevBgColor}`}
+                className={`fixed top-0 left-0 w-full h-[110%] -z-50 ${prevBgColor}`}
             />
             <motion.div
                 initial={{ opacity: 0 }}
@@ -80,9 +75,8 @@ export default function Page() {
                 transition={{
                     opacity: { duration: 0.5 },
                 }}
-                className={`${bgColor}  fixed top-0 left-0 w-full h-full -z-10`}
+                className={`${bgColor}  fixed top-0 left-0 w-full h-[110%] -z-10`}
             ></motion.div>
-
             <TopScreen />
             <About />
             <Career />

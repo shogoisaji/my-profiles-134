@@ -1,15 +1,12 @@
 import { StrengthsFinder } from '@/app/components/strengthsFinder'
-import { useOffsetTop } from '@/app/customHooks/useOffsetTop'
-import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
 
 export const Skills = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-12">
+        <div className="flex flex-col items-center justify-center py-8">
             <div className="flex flex-row justify-center">
                 <div className="flex flex-col h-full md:mr-16 mr-8 items-center justify-start">
-                    <h1 className="md:text-3xl text-2xl font-semibold text-gray-200">
+                    <h1 className="md:text-3xl text-2xl font-semibold text-white">
                         取得資格
                     </h1>
                     <div className="flex flex-col items-center">
@@ -20,13 +17,13 @@ export const Skills = () => {
                             width={128}
                             height={128}
                         />
-                        <p className="text-gray-200 md:text-lg font-semibold mt-2">
+                        <p className="text-white md:text-lg font-semibold mt-2">
                             AWS SAA
                         </p>
                     </div>
                 </div>
                 <div className="flex flex-col h-full md:mr-12 items-start justify-start">
-                    <h1 className="md:text-3xl text-2xl font-semibold text-gray-200">
+                    <h1 className="md:text-3xl text-2xl font-semibold text-white">
                         学習中
                     </h1>
                     <div className="ml-5 mt-3">

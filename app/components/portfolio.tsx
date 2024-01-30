@@ -16,7 +16,6 @@ export const Portfolio = () => {
         const updateHeight = () => {
             if (ref.current) {
                 setComponentHeight(ref.current.clientHeight)
-                console.log('h', ref.current.clientHeight)
             }
         }
         window.addEventListener('resize', updateHeight)
@@ -62,7 +61,7 @@ export const PortfolioContent = ({
     return (
         <div className="flex flex-col items-center md:py-8 py-4 w-[100%] max-w-[800px] relative">
             <div
-                className="absolute top-32 border-2 border-gray-400 opacity-50 rounded-full md:block hidden"
+                className="absolute top-32 border-2 border-gray-300 opacity-40 rounded-full md:block hidden"
                 style={{
                     rotate: '35deg',
                     borderRadius: '50%',
@@ -117,15 +116,15 @@ export const PortfolioContent = ({
                     <Link href={content.storeLink}>
                         <Image
                             src="/images/app_store.svg"
-                            className="md:mr-4 mr-2 md:h-12 h-8"
-                            alt="account"
-                            width={120}
-                            height={40}
+                            className="md:mr-8 mr-3 md:w-[133px] w-[92px]"
+                            alt="store"
+                            width={92}
+                            height={35}
                         />
                     </Link>
                 )}
                 <Link href={content.detailLink}>
-                    <div className="flex md:w-32 md:h-12 w-24 h-8 md:rounded-lg rounded-md items-center justify-center md:text-2xl text-xl font-semibold border hover:border-black hover:text-gray-700 hover:bg-amber-200 bg-custom-green text-white border-white">
+                    <div className="flex md:w-32 md:h-12 w-24 h-8 md:rounded-lg rounded-md items-center justify-center md:text-2xl text-xl font-semibold border-[0.5px] hover:border-black hover:text-gray-700 hover:bg-amber-200 bg-custom-green text-white border-white">
                         Detail
                     </div>
                 </Link>
