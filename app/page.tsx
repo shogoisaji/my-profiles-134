@@ -3,7 +3,6 @@
 import { About } from '@/app/components/about'
 import { Career } from '@/app/components/career'
 import { Footer } from '@/app/components/footer'
-import { Hobbies } from '@/app/components/hobbies'
 import { Portfolio } from '@/app/components/portfolio'
 import { Skills } from '@/app/components/skills'
 import { SplineComponent } from '@/app/components/spline'
