@@ -3,6 +3,7 @@
 import { useOffsetTop } from '@/app/customHooks/useOffsetTop'
 import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import ContentData from '@/data/portfolioContentData.json'
+import Spline from '@splinetool/react-spline'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
@@ -38,6 +39,10 @@ export const Portfolio = () => {
             ref={ref}
             className="flex flex-col items-center justify-center py-40"
         >
+            <Spline
+                className="flex flex-row justify-center w-ful md:mb-4 mb-0 md:scale-100 scale-75"
+                scene="https://prod.spline.design/pLGYrfuvxCUnZo8a/scene.splinecode"
+            />
             <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-5xl md:ml-24  font-bold text-custom-darkBlue">
                 Portfolio
             </h1>
