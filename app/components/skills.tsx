@@ -12,20 +12,25 @@ export const Skills = () => {
                     <h1 className="md:text-3xl text-2xl font-semibold text-gray-200">
                         取得資格
                     </h1>
-                    <Image
-                        src="/images/aws_saa.webp"
-                        className="md:w-32 w-28 mt-3"
-                        alt="aws"
-                        width={128}
-                        height={128}
-                    />
+                    <div className="flex flex-col items-center">
+                        <Image
+                            src="/images/aws_saa.webp"
+                            className="md:w-24 w-20 mt-2"
+                            alt="aws"
+                            width={128}
+                            height={128}
+                        />
+                        <p className="text-gray-200 md:text-lg font-semibold mt-2">
+                            AWS SAA
+                        </p>
+                    </div>
                 </div>
                 <div className="flex flex-col h-full md:mr-12 items-start justify-start">
                     <h1 className="md:text-3xl text-2xl font-semibold text-gray-200">
                         学習中
                     </h1>
                     <div className="ml-5 mt-3">
-                        <ul className="list-disc md:text-2xl text-lg font-semibold">
+                        <ul className="list-disc md:text-2xl text-xl font-semibold">
                             <li className="text-blue-200">Flutter</li>
                             <li className="text-red-200">React Native</li>
                             <li className="text-yellow-200">React</li>
