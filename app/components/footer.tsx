@@ -22,7 +22,7 @@ export const Footer = () => {
                 Thanks for Reading!
             </h1>
             <div className="py-24">
-                <Sns />
+                <Sns iconSize={42} />
             </div>
             <p className="absolute bottom-4 text-gray-300">
                 © 2024 Shogo Isaji

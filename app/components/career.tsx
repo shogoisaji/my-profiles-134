@@ -48,7 +48,7 @@ export const Career = () => {
                 <div className="flex flex-col flex-1 justify-center">
                     <Image
                         src="/images/career1.png"
-                        className="md:rounded-2xl rounded-xl"
+                        className="md:rounded-2xl rounded-xl md:pt-0 pt-4"
                         alt="career1"
                         width={800}
                         height={600}
@@ -83,7 +83,7 @@ export const Career = () => {
                 <div className="flex flex-col flex-1 justify-center">
                     <Image
                         src="/images/career2.png"
-                        className="md:rounded-2xl rounded-xl"
+                        className="md:rounded-2xl rounded-xl md:pt-0 pt-4"
                         alt="career1"
                         width={800}
                         height={600}

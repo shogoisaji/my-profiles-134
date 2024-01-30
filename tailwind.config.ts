@@ -19,7 +19,7 @@ const config: Config = {
                 'custom-blue': '#A1CCD1',
                 'custom-blown': '#7A5B51',
                 'custom-darkBlue': '#474F7A',
-                'custom-darkGreen': '#43766C',
+                'custom-darkGreen': '#4A8E8E',
             },
         },
     },
