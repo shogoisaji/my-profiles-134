@@ -5,19 +5,8 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
 export const Skills = () => {
-    const ref = useRef(null)
-    const { viewportTop = 0, pageOffsetTop = 0 } = useOffsetTop(ref)
-
-    useEffect(() => {
-        useScreenPositionsStore
-            .getState()
-            .setScreenPositions({ skills: pageOffsetTop })
-    }, [pageOffsetTop])
     return (
-        <div
-            ref={ref}
-            className="flex flex-col items-center justify-center py-40 h-60"
-        >
+        <div className="flex flex-col items-center justify-center py-12">
             <div className="flex flex-row justify-center">
                 <div className="flex flex-col h-full md:mr-16 mr-8 items-center justify-start">
                     <h1 className="md:text-3xl text-2xl font-semibold text-gray-200">

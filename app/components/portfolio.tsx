@@ -40,9 +40,9 @@ export const PortfolioContent = ({
     content: PortfolioContent
 }) => {
     return (
-        <div className="flex flex-col items-center py-8 w-[100%] max-w-[800px] relative">
+        <div className="flex flex-col items-center md:py-8 py-4 w-[100%] max-w-[800px] relative">
             <div
-                className="absolute top-32 border-2 border-gray-600 opacity-50 rounded-full md:block hidden"
+                className="absolute top-32 border-2 border-gray-400 opacity-50 rounded-full md:block hidden"
                 style={{
                     rotate: '35deg',
                     borderRadius: '50%',
