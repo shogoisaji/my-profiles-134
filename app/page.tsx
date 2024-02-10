@@ -5,6 +5,7 @@ import { Career } from '@/app/components/career'
 import { Footer } from '@/app/components/footer'
 import { Portfolio } from '@/app/components/portfolio'
 import { TopScreen } from '@/app/components/top-screen'
+import { TweetList } from '@/app/components/tweetList'
 import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
@@ -78,6 +79,7 @@ export default function Page() {
                 className={`${bgColor}  fixed top-0 left-0 w-full h-[110%] -z-10`}
             ></motion.div>
             <TopScreen />
+            <TweetList />
             <About />
             <Career />
             <Portfolio />
