@@ -3,6 +3,9 @@
 // import { promises as fs } from 'fs'
 import React, { useEffect, useRef } from 'react'
 import { Tweet } from 'react-tweet'
+import { components } from '@/app/components/tweetComponents'
+import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
+import { useOffsetTop } from '@/app/customHooks/useOffsetTop'
 
 interface Tweet {
     title: string
@@ -10,16 +13,15 @@ interface Tweet {
 }
 
 const tweetList: string[] = [
+    'https://x.com/_isaji134/status/1756619920442523986?s=20',
     'https://x.com/_isaji134/status/1756221283665404216?s=20',
     'https://x.com/_isaji134/status/1755228084067029012?s=20',
+    'https://x.com/_isaji134/status/1753474619112395160?s=20',
 ]
 
 export const TweetList = () => {
-    const listRef = useRef<HTMLDivElement>(null)
-    // const file = await fs.readFile(
-    //     process.cwd() + '/app/data/tweetList.json',
-    //     'utf8'
-    // )
+    const ref = useRef<HTMLDivElement>(null)
+    const { viewportTop = 0, pageOffsetTop = 0 } = useOffsetTop(ref)
     const postUrls = tweetList
 
     const postList: any[] = []
@@ -29,24 +31,30 @@ export const TweetList = () => {
 
         const id = paths[paths.length - 1].substring(0, 19)
         console.log('tweet id', id)
-        postList.push(<Tweet id={id} />)
+        postList.push(
+            <div className="px-1">
+                <Tweet id={id} components={components} />
+            </div>
+        )
     })
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            if (listRef.current) {
-                const { scrollLeft, clientWidth, scrollWidth } = listRef.current
-                const isEnd = scrollLeft + clientWidth >= scrollWidth
-                listRef.current.scrollLeft = isEnd ? 0 : scrollLeft + 1
-            }
-        }, 50) // 50ミリ秒ごとに1ピクセルスクロール
-
-        return () => clearInterval(interval) // コンポーネントのアンマウント時にインターバルをクリア
-    }, [])
+        useScreenPositionsStore
+            .getState()
+            .setScreenPositions({ tweet: pageOffsetTop })
+    }, [pageOffsetTop])
 
     return (
-        <div ref={listRef} style={{ display: 'flex', overflowX: 'auto' }}>
-            {postList}
+        <div ref={ref} className="md:py-32 py-12">
+            <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-5xl md:ml-24  font-bold text-custom-darkGreen">
+                X posts
+            </h1>
+            <div
+                className="h-auto w-full overflow-x-auto"
+                style={{ display: 'flex' }}
+            >
+                {postList}
+            </div>
         </div>
     )
 }

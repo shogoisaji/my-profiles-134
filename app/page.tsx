@@ -42,10 +42,16 @@ export default function Page() {
             setBgColor('bg-custom-darkBlue')
         } else if (
             window.scrollY + offset > screenPositions.portfolio &&
-            window.scrollY + offset < screenPositions.footer
+            window.scrollY + offset < screenPositions.tweet
         ) {
             setCurrentScreenName('portfolio')
             setBgColor('bg-custom-darkGreen')
+        } else if (
+            window.scrollY + offset > screenPositions.tweet &&
+            window.scrollY + offset < screenPositions.footer
+        ) {
+            setCurrentScreenName('tweet')
+            setBgColor('bg-custom-black')
         } else if (window.scrollY + offset > screenPositions.footer) {
             setCurrentScreenName('footer')
             setBgColor('bg-custom-blown')
@@ -79,10 +85,10 @@ export default function Page() {
                 className={`${bgColor}  fixed top-0 left-0 w-full h-[110%] -z-10`}
             ></motion.div>
             <TopScreen />
-            <TweetList />
             <About />
             <Career />
             <Portfolio />
+            <TweetList />
             <Footer />
         </main>
     )
