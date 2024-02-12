@@ -5,6 +5,7 @@ import { Career } from '@/app/components/career'
 import { Footer } from '@/app/components/footer'
 import { Portfolio } from '@/app/components/portfolio'
 import { TopScreen } from '@/app/components/top-screen'
+import { TweetList } from '@/app/components/tweetList'
 import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
@@ -41,10 +42,16 @@ export default function Page() {
             setBgColor('bg-custom-darkBlue')
         } else if (
             window.scrollY + offset > screenPositions.portfolio &&
-            window.scrollY + offset < screenPositions.footer
+            window.scrollY + offset < screenPositions.tweet
         ) {
             setCurrentScreenName('portfolio')
             setBgColor('bg-custom-darkGreen')
+        } else if (
+            window.scrollY + offset > screenPositions.tweet &&
+            window.scrollY + offset < screenPositions.footer
+        ) {
+            setCurrentScreenName('tweet')
+            setBgColor('bg-custom-black')
         } else if (window.scrollY + offset > screenPositions.footer) {
             setCurrentScreenName('footer')
             setBgColor('bg-custom-blown')
@@ -81,6 +88,7 @@ export default function Page() {
             <About />
             <Career />
             <Portfolio />
+            <TweetList />
             <Footer />
         </main>
     )

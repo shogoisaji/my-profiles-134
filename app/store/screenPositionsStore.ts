@@ -5,6 +5,7 @@ type ScreenPositions = {
     about: number
     career: number
     portfolio: number
+    tweet: number
     footer: number
 }
 
@@ -19,6 +20,7 @@ export const useScreenPositionsStore = create<State>((set) => ({
         about: 0,
         career: 0,
         portfolio: 0,
+        tweet: 0,
         footer: 0,
     },
     setScreenPositions: (state: Partial<ScreenPositions>) =>
