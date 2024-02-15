@@ -98,9 +98,11 @@ export const PortfolioContent = ({
                         } grid-flow-col gap-2 md:pb-4 pb-2`}
                     >
                         {content.tools.map((tool: string) => (
-                            <div className="hover:saturate-100 filter saturate-5 transition-all duration-300">
+                            <div
+                                key={tool}
+                                className="hover:saturate-100 filter saturate-5 transition-all duration-300"
+                            >
                                 <Image
-                                    key={tool}
                                     src={`/toolImages/${tool}.png`}
                                     className="md:rounded-xl rounded-lg md:w-[70px] w-[40px]"
                                     alt="tool"

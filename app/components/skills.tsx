@@ -15,9 +15,11 @@ export const Skills = () => {
     const ImageList = (
         <div className="flex overflow-x-scroll ">
             {tools.map((tool) => (
-                <div className="hover:saturate-100 hover:scale-110 scale-100 filter saturate-5 transition-all duration-300">
+                <div
+                    key={tool}
+                    className="hover:saturate-100 hover:scale-110 scale-100 filter saturate-5 transition-all duration-300"
+                >
                     <Image
-                        key={tool}
                         src={`/toolImages/${tool}.png`}
                         className="md:w-20 w-10 rounded-md md:m-2 m-1"
                         alt={tool}
