@@ -18,68 +18,6 @@ export const Footer = () => {
             ref={ref}
             className="flex flex-col items-center justify-center h-[150vh] relative"
         >
-            <div className="flex flex-row justify-center w-full -z-10">
-                <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{
-                        rotate: {
-                            duration: 11,
-                            repeat: Infinity,
-                            ease: 'easeInOut',
-                        },
-                    }}
-                    className="absolute"
-                >
-                    <div
-                        className="border border-white rounded-full"
-                        style={{
-                            borderRadius: '50%',
-                            height: '25vw',
-                            width: '90vw',
-                        }}
-                    />
-                </motion.div>
-                <motion.div
-                    initial={{ rotate: 45 }}
-                    animate={{ rotate: 405 }}
-                    transition={{
-                        duration: 10,
-                        repeat: Infinity,
-                        delay: 0.3,
-                        ease: 'easeInOut',
-                    }}
-                    className="absolute"
-                >
-                    <div
-                        className="border border-white rounded-full"
-                        style={{
-                            borderRadius: '50%',
-                            height: '25vw',
-                            width: '90vw',
-                        }}
-                    />
-                </motion.div>
-                <motion.div
-                    initial={{ rotate: 90 }}
-                    animate={{ rotate: 450 }}
-                    transition={{
-                        duration: 9,
-                        repeat: Infinity,
-                        delay: 0.5,
-                        ease: 'easeInOut',
-                    }}
-                    className="absolute"
-                >
-                    <div
-                        className="border border-white rounded-full"
-                        style={{
-                            borderRadius: '50%',
-                            height: '25vw',
-                            width: '90vw',
-                        }}
-                    />
-                </motion.div>
-            </div>
             <h1 className=" font-bold md:text-4xl text-3xl md:mt-12">
                 Thanks for Reading!
             </h1>

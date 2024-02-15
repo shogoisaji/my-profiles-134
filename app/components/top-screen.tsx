@@ -9,11 +9,11 @@ export const TopScreen = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                    opacity: { duration: 2 },
+                    opacity: { duration: 3 },
                 }}
                 className="flex items-center justify-center "
             >
-                <motion.div
+                {/* <motion.div
                     animate={{ rotate: 360 }}
                     transition={{
                         rotate: {
@@ -72,7 +72,7 @@ export const TopScreen = () => {
                             width: '75vw',
                         }}
                     />
-                </motion.div>
+                </motion.div> */}
                 <h1
                     className="text-center font-black text-gray-600 z-10"
                     style={{
@@ -82,7 +82,7 @@ export const TopScreen = () => {
                 >
                     {`SHOGO\'s`}
                     <br />
-                    PROFILES
+                    PORTFOLIO
                 </h1>
             </motion.div>
         </div>
