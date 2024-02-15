@@ -2,7 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const Sns = (props: { iconSize: number; gridCount: number }) => {
-    const gridClass = `grid grid-cols-${props.gridCount} gap-4`
+    // grid 2 or 4
+    const gridClass = `grid ${
+        props.gridCount === 2 ? 'grid-cols-2' : 'grid-cols-4'
+    } gap-4`
     return (
         <div className={gridClass}>
             <Link href="https://github.com/shogoisaji">
