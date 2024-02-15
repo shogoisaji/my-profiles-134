@@ -15,10 +15,10 @@ export const Career = () => {
     return (
         <div
             ref={ref}
-            className="flex flex-col justify-center items-center relative"
+            className="flex flex-col justify-center items-center relative text-custom-textWhite"
         >
-            <div className="md:w-[80%] w-[90%] bg-slate-500 bg-opacity-70 rounded-xl">
-                <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-5xl p-4 font-bold">
+            <div className="md:w-[80%] w-[90%] bg-slate-500 bg-opacity-70 md:rounded-3xl rounded-xl">
+                <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-4xl p-4 font-bold">
                     Career
                 </h1>
                 {/* career1 */}

@@ -1,5 +1,6 @@
 'use client'
 
+import { DetailButton } from '@/app/components/detailButton'
 import { useOffsetTop } from '@/app/customHooks/useOffsetTop'
 import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import ContentData from '@/data/portfolioContentData.json'
@@ -35,19 +36,22 @@ export const Portfolio = () => {
     }, [pageOffsetTop])
 
     return (
-        <div ref={ref} className="flex flex-col items-center justify-center">
-            <div className="md:w-[80%] w-[90%] bg-slate-500 bg-opacity-70 rounded-xl">
+        <div
+            ref={ref}
+            className="flex flex-col items-center justify-center text-custom-textWhite"
+        >
+            <div className="md:w-[80%] w-[90%] bg-slate-500 bg-opacity-70 md:rounded-3xl rounded-xl">
+                <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-4xl p-4 font-bold">
+                    Portfolio
+                </h1>
                 <Spline
                     className="flex flex-row justify-center w-ful md:mb-4 mb-0 md:scale-100 scale-75"
                     scene="https://prod.spline.design/pLGYrfuvxCUnZo8a/scene.splinecode"
                 />
-                <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-5xl p-4 font-bold">
-                    Portfolio
-                </h1>
                 {ContentData.map((data: PortfolioContent) => (
                     <div
                         key={data.title}
-                        className="my-4 w-full flex justify-center items-center"
+                        className="my-4 px-2 w-full flex justify-center items-center"
                     >
                         <PortfolioContent content={data} />
                     </div>
@@ -94,20 +98,22 @@ export const PortfolioContent = ({
                         } grid-flow-col gap-2 md:pb-4 pb-2`}
                     >
                         {content.tools.map((tool: string) => (
-                            <Image
-                                key={tool}
-                                src={`/toolImages/${tool}.png`}
-                                className="md:rounded-xl rounded-lg md:w-[70px] w-[40px]"
-                                alt="tool"
-                                width={70}
-                                height={70}
-                            />
+                            <div className="hover:saturate-100 filter saturate-5 transition-all duration-300">
+                                <Image
+                                    key={tool}
+                                    src={`/toolImages/${tool}.png`}
+                                    className="md:rounded-xl rounded-lg md:w-[70px] w-[40px]"
+                                    alt="tool"
+                                    width={70}
+                                    height={70}
+                                />
+                            </div>
                         ))}
                     </div>
                 </div>
             </div>
             {content.image && (
-                <div className="hover:saturate-100 filter saturate-10 transition-all duration-300">
+                <div className="hover:saturate-100 filter saturate-5 transition-all duration-300">
                     <Image
                         src={`/images/${content.image}`}
                         className="md:rounded-2xl rounded-lg z-10"
@@ -117,7 +123,7 @@ export const PortfolioContent = ({
                     />
                 </div>
             )}
-            <div className="flex w-full flex-row justify-end md:p-4 p-2 z-10">
+            <div className="flex w-full flex-row justify-end md:p-4 p-2 z-10 ">
                 {content.storeLink && (
                     <Link href={content.storeLink}>
                         <Image
@@ -130,8 +136,8 @@ export const PortfolioContent = ({
                     </Link>
                 )}
                 <Link href={content.detailLink}>
-                    <div className="flex md:w-32 md:h-12 w-24 h-8 md:rounded-lg rounded-md items-center justify-center md:text-2xl text-xl font-semibold border-[0.5px] hover:border-black hover:text-gray-700 hover:bg-amber-200 bg-custom-green text-white border-white">
-                        Detail
+                    <div className="md:w-36  w-32 md:h-14 h-12">
+                        <DetailButton />
                     </div>
                 </Link>
             </div>
