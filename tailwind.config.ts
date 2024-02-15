@@ -9,7 +9,7 @@ const config: Config = {
     theme: {
         extend: {
             saturate: {
-                10: '.1',
+                5: '.05',
                 100: '1.0',
             },
             animation: {

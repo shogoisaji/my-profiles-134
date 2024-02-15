@@ -88,7 +88,7 @@ export default function Page() {
             {spacer()}
             <TweetList />
             <Footer />
-            <div className="fixed top-0 left-0 w-full -z-10">
+            <div className="h-full w-full -z-10">
                 <BgSpline />
             </div>
             <div className="fixed top-0 left-0 w-full h-full -z-20 bg-custom-dark" />

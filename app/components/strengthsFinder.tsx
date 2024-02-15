@@ -4,11 +4,11 @@ export const StrengthsFinder = () => {
         color: string
     }
     const items: ItemTypes[] = [
-        { item: '個別化', color: 'text-gray-600' },
-        { item: '着想', color: 'text-gray-600' },
-        { item: '最上思考', color: 'text-gray-600' },
-        { item: '分析思考', color: 'text-gray-600' },
-        { item: '自己確信', color: 'text-gray-600' },
+        { item: '個別化', color: 'text-red-800' },
+        { item: '着想', color: 'text-blue-800' },
+        { item: '最上思考', color: 'text-green-800' },
+        { item: '分析思考', color: 'text-orange-800' },
+        { item: '自己確信', color: 'text-pink-800' },
     ]
     return (
         <div className="flex flex-row justify-center items-center py-4 ">
@@ -33,7 +33,7 @@ export const StrengthsFinder = () => {
                     {items.map((item: ItemTypes) => (
                         <div
                             key={item.item}
-                            className="flex flex-col  items-center justify-center rounded-xl py-4 md:w-[17%] w-[19%] bg-gray-300"
+                            className="flex flex-col  items-center justify-center rounded-xl py-4 md:w-[17%] w-[19%] bg-gray-300 hover:scale-110 scale-100 hover:saturate-100 filter saturate-5 transition-all duration-300"
                         >
                             <p
                                 className={`md:text-xl sm:text-lg text-sm font-bold ${item.color}`}
