@@ -5,17 +5,17 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: 'my_profiles_shogoisaji',
-    description: 'my_profiles_shogoisaji',
-    keywords: 'shogoisaji,134,shogo isaji',
+    title: "shogo's portfolio",
+    description: "This page is shogo's portfolio.",
+    keywords: 'shogoisaji, 134, shogo, isaji, portfolio',
     openGraph: {
         type: 'website',
-        url: '/', //deployURL,
-        title: 'my_profiles_shogoisaji',
-        description: 'my_profiles_shogoisaji',
+        url: 'https://isaji134.com', //deployURL,
+        title: "shogo's portfolio",
+        description: "shogo's portfolio",
         images: [
             {
-                url: '/', //imageURL,
+                url: 'https://isaji134.com/images/portfolio_image.pnp', //imageURL,
             },
         ],
     },

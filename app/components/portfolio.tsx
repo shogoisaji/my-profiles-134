@@ -35,25 +35,24 @@ export const Portfolio = () => {
     }, [pageOffsetTop])
 
     return (
-        <div
-            ref={ref}
-            className="flex flex-col items-center justify-center py-40"
-        >
-            <Spline
-                className="flex flex-row justify-center w-ful md:mb-4 mb-0 md:scale-100 scale-75"
-                scene="https://prod.spline.design/pLGYrfuvxCUnZo8a/scene.splinecode"
-            />
-            <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-5xl md:ml-24  font-bold text-custom-darkBlue">
-                Portfolio
-            </h1>
-            {ContentData.map((data: PortfolioContent) => (
-                <div
-                    key={data.title}
-                    className="my-4 w-full flex justify-center items-center"
-                >
-                    <PortfolioContent content={data} />
-                </div>
-            ))}
+        <div ref={ref} className="flex flex-col items-center justify-center">
+            <div className="md:w-[80%] w-[90%] bg-slate-500 bg-opacity-70 rounded-xl">
+                <Spline
+                    className="flex flex-row justify-center w-ful md:mb-4 mb-0 md:scale-100 scale-75"
+                    scene="https://prod.spline.design/pLGYrfuvxCUnZo8a/scene.splinecode"
+                />
+                <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-5xl p-4 font-bold">
+                    Portfolio
+                </h1>
+                {ContentData.map((data: PortfolioContent) => (
+                    <div
+                        key={data.title}
+                        className="my-4 w-full flex justify-center items-center"
+                    >
+                        <PortfolioContent content={data} />
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
@@ -108,13 +107,15 @@ export const PortfolioContent = ({
                 </div>
             </div>
             {content.image && (
-                <Image
-                    src={`/images/${content.image}`}
-                    className="md:rounded-2xl rounded-lg z-10"
-                    alt="account"
-                    width={800}
-                    height={600}
-                />
+                <div className="hover:saturate-100 filter saturate-10 transition-all duration-300">
+                    <Image
+                        src={`/images/${content.image}`}
+                        className="md:rounded-2xl rounded-lg z-10"
+                        alt="account"
+                        width={800}
+                        height={600}
+                    />
+                </div>
             )}
             <div className="flex w-full flex-row justify-end md:p-4 p-2 z-10">
                 {content.storeLink && (

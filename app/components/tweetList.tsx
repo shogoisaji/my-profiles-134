@@ -45,15 +45,17 @@ export const TweetList = () => {
     }, [pageOffsetTop])
 
     return (
-        <div ref={ref} className="md:py-32 py-12">
-            <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-5xl md:ml-24  font-bold text-custom-darkGreen">
-                X posts
-            </h1>
-            <div
-                className="h-auto w-full overflow-x-auto"
-                style={{ display: 'flex' }}
-            >
-                {postList}
+        <div ref={ref} className="flex flex-col items-center justify-center">
+            <div className="md:w-[80%] w-[90%] bg-slate-500 bg-opacity-70 rounded-xl">
+                <h1 className="flex flex-row justify-start z-20 w-full md:text-6xl text-5xl p-4 font-bold">
+                    X posts
+                </h1>
+                <div
+                    className="h-auto w-full overflow-x-auto"
+                    style={{ display: 'flex' }}
+                >
+                    {postList}
+                </div>
             </div>
         </div>
     )

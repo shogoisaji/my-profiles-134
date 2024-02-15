@@ -1,6 +1,7 @@
 'use client'
 
 import { About } from '@/app/components/about'
+import { BgSpline } from '@/app/components/bgSpline'
 import { Career } from '@/app/components/career'
 import { Footer } from '@/app/components/footer'
 import { Portfolio } from '@/app/components/portfolio'
@@ -71,25 +72,26 @@ export default function Page() {
             window.removeEventListener('scroll', setCurrentPositionHandler)
         }
     }, [setCurrentPositionHandler])
+
+    const spacer = () => {
+        return <div className="md:h-20 h-10" />
+    }
+
     return (
-        <main className="flex flex-col px-4">
-            <div
-                className={`fixed top-0 left-0 w-full h-[110%] -z-50 ${prevBgColor}`}
-            />
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={isChange ? { opacity: 1 } : { opacity: 0 }}
-                transition={{
-                    opacity: { duration: 0.5 },
-                }}
-                className={`${bgColor}  fixed top-0 left-0 w-full h-[110%] -z-10`}
-            ></motion.div>
+        <main className="flex flex-col md:px-4 px-2">
             <TopScreen />
             <About />
+            {spacer()}
             <Career />
+            {spacer()}
             <Portfolio />
+            {spacer()}
             <TweetList />
             <Footer />
+            <div className="fixed top-0 left-0 w-full -z-10">
+                <BgSpline />
+            </div>
+            <div className="fixed top-0 left-0 w-full h-full -z-20 bg-custom-dark" />
         </main>
     )
 }

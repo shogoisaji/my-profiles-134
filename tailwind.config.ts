@@ -8,6 +8,19 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            saturate: {
+                10: '.1',
+                100: '1.0',
+            },
+            animation: {
+                scrollHorizontally: 'scrollHorizontally 10s linear infinite',
+            },
+            keyframes: {
+                scrollHorizontally: {
+                    '0%': { transform: 'translateX(0%)' },
+                    '100%': { transform: 'translateX(-100%)' },
+                },
+            },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic':
@@ -21,6 +34,8 @@ const config: Config = {
                 'custom-darkBlue': '#474F7A',
                 'custom-darkGreen': '#4A8E8E',
                 'custom-black': '#081933',
+                'custom-dark': '#1A1F33',
+                'custom-textWhite': '#D4D8F0',
             },
         },
     },

@@ -4,15 +4,15 @@ export const StrengthsFinder = () => {
         color: string
     }
     const items: ItemTypes[] = [
-        { item: '個別化', color: 'text-red-700' },
-        { item: '着想', color: 'text-blue-700' },
-        { item: '最上思考', color: 'text-green-700' },
-        { item: '分析思考', color: 'text-yellow-700' },
-        { item: '自己確信', color: 'text-purple-700' },
+        { item: '個別化', color: 'text-gray-600' },
+        { item: '着想', color: 'text-gray-600' },
+        { item: '最上思考', color: 'text-gray-600' },
+        { item: '分析思考', color: 'text-gray-600' },
+        { item: '自己確信', color: 'text-gray-600' },
     ]
     return (
         <div className="flex flex-row justify-center items-center py-4 ">
-            <div className="flex flex-col justify-center w-[100%] max-w-[800px] p-4 mb-4">
+            <div className="flex flex-col justify-center w-[100%] max-w-[800px] p-4">
                 <div className="flex flex-col flex-1 items-start">
                     <div className="md:text-4xl text-3xl font-bold">
                         Strengths Finder 2.0
