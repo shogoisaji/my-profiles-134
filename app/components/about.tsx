@@ -39,7 +39,7 @@ export const About = () => {
                             Shogo Isaji
                         </h1>
                         {/* link icons */}
-                        <Sns iconSize={28} />
+                        <Sns iconSize={28} gridCount={2} />
                     </div>
                     <div className="flex flex-col items-center justify-center md:w-[50%] flex-1 md:flex-initial md:mb-6">
                         <p className="md:text-xl mt-4">

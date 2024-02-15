@@ -22,7 +22,7 @@ export const Footer = () => {
                 Thanks for Reading!
             </h1>
             <div className="md:pt-12 pt-6">
-                <Sns iconSize={42} />
+                <Sns iconSize={42} gridCount={4} />
             </div>
             <p className="absolute bottom-4 text-gray-300">
                 © 2024 Shogo Isaji
