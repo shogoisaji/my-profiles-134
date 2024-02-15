@@ -16,8 +16,8 @@ export const BgSpline = () => {
             <div className="lg:hidden block fixed top-0 left-0">
                 <Image
                     src="/images/alt_bg.png"
-                    width={1920}
-                    height={1080}
+                    width={664}
+                    height={1440}
                     alt="background"
                 />
             </div>
