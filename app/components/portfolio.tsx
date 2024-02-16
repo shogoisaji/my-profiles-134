@@ -130,7 +130,7 @@ export const PortfolioContent = ({
                     <Link href={content.storeLink}>
                         <Image
                             src="/images/app_store.svg"
-                            className="md:mr-8 mr-3 md:w-[133px] w-[92px]"
+                            className="md:mr-8 mr-3 md:mt-0 mt-1 md:w-[133px] w-[92px]"
                             alt="store"
                             width={92}
                             height={35}
