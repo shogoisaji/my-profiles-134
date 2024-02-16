@@ -25,7 +25,7 @@ export const TweetList = () => {
 
         const id = paths[paths.length - 1].substring(0, 19)
         postList.push(
-            <div className="px-1">
+            <div key={id} className="px-1">
                 <Tweet id={id} components={components} />
             </div>
         )
