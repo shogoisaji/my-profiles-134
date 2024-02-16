@@ -74,7 +74,7 @@ export const TopScreen = () => {
                     />
                 </motion.div> */}
                 <h1
-                    className="text-center font-black text-gray-600 z-10"
+                    className="text-center text-gray-600 z-10 font-black"
                     style={{
                         fontSize: '12vw',
                         lineHeight: '0.9',

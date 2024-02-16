@@ -4,6 +4,7 @@ import { About } from '@/app/components/about'
 import { BgSpline } from '@/app/components/bgSpline'
 import { Career } from '@/app/components/career'
 import { Footer } from '@/app/components/footer'
+import { History } from '@/app/components/history'
 import { Portfolio } from '@/app/components/portfolio'
 import { TopScreen } from '@/app/components/top-screen'
 import { TweetList } from '@/app/components/tweetList'
@@ -82,7 +83,7 @@ export default function Page() {
             <TopScreen />
             <About />
             {spacer()}
-            <Career />
+            <History />
             {spacer()}
             <Portfolio />
             {spacer()}

@@ -1,8 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import {
+    Inter,
+    Kanit,
+    Kiwi_Maru,
+    Kosugi,
+    Shippori_Antique_B1,
+} from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+// const kosugi = Kosugi({ weight: '400', subsets: ['cyrillic'] })
+// const inter = Inter({ subsets: ['latin'] })
+// const kiwamaru = Kiwi_Maru({ weight: '400', subsets: ['latin'] })
+// const shipporiAntique = Shippori_Antique_B1({
+//     weight: '400',
+//     subsets: ['latin'],
+// })
+const kanit = Kanit({ weight: ['400', '700', '900'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: "shogo's portfolio",
@@ -28,7 +41,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="jp">
-            <body className={inter.className}>{children}</body>
+            <body className={kanit.className}>{children}</body>
         </html>
     )
 }
