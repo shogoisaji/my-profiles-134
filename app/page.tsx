@@ -74,12 +74,10 @@ export default function Page() {
         }
     }, [setCurrentPositionHandler])
 
-    const spacer = () => {
-        return <div className="md:h-20 h-10" />
-    }
+    const spacer = () => <div className="md:h-20 h-10" />
 
     return (
-        <main className="flex flex-col md:px-4 px-2">
+        <main className="flex flex-col items-center md:px-4 px-2 max-w-8xl mx-auto">
             <TopScreen />
             <About />
             {spacer()}
