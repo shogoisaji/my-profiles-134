@@ -21,7 +21,7 @@ export const History = () => {
                         />
                     </div>
 
-                    <div className="md:w-[50%] w-[92%] h-auto aspect-w-1 aspect-h-1 m-4 pl-2 bg-slate-400 bg-opacity-20 rounded-xl">
+                    <div className="md:w-[50%] w-[92%] h-96 aspect-w-1 aspect-h-1 m-4 pl-2 bg-slate-400 bg-opacity-20 rounded-xl">
                         <Rive src={'rive/history.riv'} stateMachines="state" />
                     </div>
                 </div>
