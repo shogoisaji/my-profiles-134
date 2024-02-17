@@ -1,45 +1,12 @@
-'use client'
-
 import { DetailButton } from '@/app/components/detailButton'
-import { useOffsetTop } from '@/app/customHooks/useOffsetTop'
-import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import ContentData from '@/data/portfolioContentData.json'
 import Spline from '@splinetool/react-spline'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
 
 export const Portfolio = () => {
-    const ref = useRef<HTMLDivElement>(null)
-    const { viewportTop = 0, pageOffsetTop = 0 } = useOffsetTop(ref)
-    const [componentHeight, setComponentHeight] = useState(0)
-
-    useEffect(() => {
-        const updateHeight = () => {
-            if (ref.current) {
-                setComponentHeight(ref.current.clientHeight)
-            }
-        }
-        window.addEventListener('resize', updateHeight)
-        // 初期値を設定
-        updateHeight()
-        // クリーンアップ関数
-        return () => {
-            window.removeEventListener('resize', updateHeight)
-        }
-    }, [])
-
-    useEffect(() => {
-        useScreenPositionsStore
-            .getState()
-            .setScreenPositions({ portfolio: pageOffsetTop })
-    }, [pageOffsetTop])
-
     return (
-        <div
-            ref={ref}
-            className="flex flex-col items-center justify-center text-custom-textWhite"
-        >
+        <div className="flex flex-col items-center justify-center text-custom-textWhite">
             <div className="md:w-[80%] w-[90%] bg-slate-500 backdrop-blur bg-opacity-50 md:rounded-3xl rounded-xl">
                 <h1 className="flex flex-row justify-start z-20 w-full md:text-7xl text-4xl p-4 font-black">
                     Portfolio
