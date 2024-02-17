@@ -1,10 +1,6 @@
-'use client'
-
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { Tweet } from 'react-tweet'
 import { components } from '@/app/components/tweetComponents'
-import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
-import { useOffsetTop } from '@/app/customHooks/useOffsetTop'
 import TweetListData from '@/data/tweetList.json'
 
 interface Tweet {
@@ -15,8 +11,6 @@ interface Tweet {
 const tweetList: string[] = TweetListData
 
 export const TweetList = () => {
-    const ref = useRef<HTMLDivElement>(null)
-    const { viewportTop = 0, pageOffsetTop = 0 } = useOffsetTop(ref)
     const postUrls = tweetList
 
     const postList: any[] = []
@@ -31,17 +25,8 @@ export const TweetList = () => {
         )
     })
 
-    useEffect(() => {
-        useScreenPositionsStore
-            .getState()
-            .setScreenPositions({ tweet: pageOffsetTop })
-    }, [pageOffsetTop])
-
     return (
-        <div
-            ref={ref}
-            className="flex flex-col items-center justify-center text-custom-textWhite"
-        >
+        <div className="flex flex-col items-center justify-center text-custom-textWhite">
             <div className="md:w-[80%] w-[90%] bg-slate-500 backdrop-blur bg-opacity-50 md:rounded-3xl rounded-xl">
                 <h1 className="flex flex-row justify-start z-20 w-full md:text-7xl text-4xl p-4 font-black">
                     X posts

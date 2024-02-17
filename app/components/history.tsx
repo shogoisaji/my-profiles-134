@@ -1,25 +1,9 @@
-'use client'
-
-import { useOffsetTop } from '@/app/customHooks/useOffsetTop'
-import { useScreenPositionsStore } from '@/app/store/screenPositionsStore'
 import Rive from '@rive-app/react-canvas'
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
 
 export const History = () => {
-    const ref = useRef(null)
-    const { viewportTop = 0, pageOffsetTop = 0 } = useOffsetTop(ref)
-
-    useEffect(() => {
-        useScreenPositionsStore
-            .getState()
-            .setScreenPositions({ career: pageOffsetTop })
-    }, [pageOffsetTop])
     return (
-        <div
-            ref={ref}
-            className="flex flex-col justify-center items-center relative text-custom-textWhite"
-        >
+        <div className="flex flex-col justify-center items-center relative text-custom-textWhite">
             <div className="md:w-[80%] w-[90%] bg-slate-500 backdrop-blur bg-opacity-50 md:rounded-3xl rounded-xl">
                 <div className="flex md:flex-row flex-col justify-between">
                     <div className="flex flex-col justify-between">
