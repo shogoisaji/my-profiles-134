@@ -35,15 +35,6 @@ export const PortfolioContent = ({
 }) => {
     return (
         <div className="flex flex-col items-center md:py-8 py-4 w-[100%] max-w-[800px] relative">
-            <div
-                className="absolute top-32 border-2 border-gray-300 opacity-40 rounded-full md:block hidden"
-                style={{
-                    rotate: '35deg',
-                    borderRadius: '50%',
-                    height: '35vw',
-                    width: '85vw',
-                }}
-            />
             <div className="flex md:flex-row flex-col md:items-end items-start justify-between z-10 md:px-4 px-1 w-full">
                 <div className="flex flex-col w-full md:pb-4 pb-2 md:pr-4 pr-0">
                     <h1 className="text-xl text-custom-yellow">
