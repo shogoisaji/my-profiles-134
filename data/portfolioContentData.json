@@ -1,5 +1,14 @@
 [
     {
+        "title": "SunFoTimer",
+        "subtitle": "太陽が沈むタイマー",
+        "description": "タイマーが進むにつれて太陽が沈むアプリです。アニメーションツールRiveを使いアプリの状態管理を一部行なっています。",
+        "image": "sunfotimer_image.png",
+        "tools": ["flutter", "rive"],
+        "detailLink": "https://sunfotimer-web.vercel.app/",
+        "storeLink": "https://apps.apple.com/app/sunfotimer/id6479334334"
+    },
+    {
         "title": "Kaachan",
         "subtitle": "学習記録監視アプリ",
         "description": "3rdリリースアプリ🚀初めてReactNativeを使用して作成。学習習慣を付けてもらえたらと思い作成しました。学習状況に応じて『か〜ちゃん』の表情が変化します。",

@@ -82,7 +82,7 @@ export const PortfolioContent = ({
                 </div>
             </div>
             {content.image && (
-                <div className="hover:saturate-100 filter saturate-5 transition-all duration-300">
+                <div className="z-10">
                     <Image
                         src={`/images/${content.image}`}
                         className="md:rounded-2xl rounded-lg z-10"
