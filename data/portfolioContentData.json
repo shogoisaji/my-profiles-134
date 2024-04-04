@@ -11,7 +11,7 @@
     {
         "title": "SunFoTimer",
         "subtitle": "太陽が沈むタイマー",
-        "description": "タイマーが進むにつれて太陽が沈むアプリです。アニメーションツールRiveを使いアプリの状態管理を一部行なっています。",
+        "description": "タイマーが進むにつれて太陽が沈むアプリです。アニメーションツールRiveを使いアプリの状態管理を一部行なっています。macOS版もリリース🚀",
         "image": "sunfotimer_image.png",
         "tools": ["flutter", "rive"],
         "detailLink": "https://sunfotimer.vercel.app/",
