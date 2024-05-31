@@ -11,10 +11,6 @@ export const Portfolio = () => {
         <h1 className="flex flex-row justify-start z-20 w-full md:text-7xl text-4xl p-4 font-black">
           Portfolio
         </h1>
-        {/* <Spline
-          className="flex flex-row justify-center w md:mb-4 mb-0 md:scale-100 scale-75"
-          scene="https://prod.spline.design/pLGYrfuvxCUnZo8a/scene.splinecode"
-        /> */}
         {ContentData.map((data: PortfolioContent) => (
           <div
             key={data.title}
