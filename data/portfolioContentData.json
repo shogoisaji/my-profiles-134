@@ -1,5 +1,14 @@
 [
   {
+    "title": "Worbbing",
+    "subtitle": "単語学習アプリ",
+    "description": "エビングハウスの忘却曲線に基づき、復習タイミングを適切に管理し、単語の定着を促します。単語登録時にはAIを使用し、翻訳、例文の提示、例文の翻訳、タイポのチェックを行います。",
+    "image": "worbbing.png",
+    "tools": ["flutter"],
+    "detailLink": "https://worbbing.vercel.app/",
+    "storeLink": "https://apps.apple.com/jp/app/worbbing/id6504094847"
+  },
+  {
     "title": "Membo",
     "subtitle": "みんなで作る想い出ボード",
     "description": "ボードに写真を貼り、コメントを書き込んで想い出を残せます。友人と共に編集し、想い出を共有できます。リアルタイム編集も可能！",
@@ -56,7 +65,7 @@
   {
     "title": "Calasol",
     "subtitle": "カラーセレクトアプリ",
-    "description": "Flutterを使用して作成。どのようなカラーを使おうか迷っている際に、役立つアプリです。ランダムや配列からカラーを選択し、カラーコードの取得が出来ます。作成期間:10日",
+    "description": "Flutterを使用して作成。どのようなカラーを使おうか迷っている際に、役立つアプリです。ランダムや配列からカラーを選択し、カラーコードの取得が出来ます。",
     "image": "colasol_image.png",
     "tools": ["flutter"],
     "detailLink": "https://github.com/shogoisaji/colasol#readme",
@@ -74,25 +83,16 @@
   {
     "title": "BicycleRental",
     "subtitle": "自転車レンタルアプリ",
-    "description": "Flutterを使用し作成。email又はgoogleでログインし、自転車、期間を選択しレンタルする。adminは登録、編集、履歴の確認ができる。状態管理はgetXを使用した。作成期間:14日",
+    "description": "Flutterを使用し作成。email又はgoogleでログインし、自転車、期間を選択しレンタルする。adminは登録、編集、履歴の確認ができる。状態管理はgetXを使用した。",
     "image": "br_image.png",
     "tools": ["flutter", "firebase"],
     "detailLink": "https://github.com/shogoisaji/bicycle_rental_system/#readme",
     "storeLink": ""
   },
   {
-    "title": "Worbbing",
-    "subtitle": "英単語復習アプリ",
-    "description": "Flutterを使用し作成。エビングハウスの忘却曲線に基づき、復習タイミングを適切に管理し、英単語の定着を助ける。作成期間:10日",
-    "image": "worbbing_image.png",
-    "tools": ["flutter"],
-    "detailLink": "https://myprofilepoliteku03.framer.ai/worbbing",
-    "storeLink": ""
-  },
-  {
     "title": "Travel Canvas",
     "subtitle": "旅の記録アプリ",
-    "description": "Flutterを使用し作成。google map APIを使い写真とmapを連携することで、より旅の記憶を深くする。作成期間:10日",
+    "description": "Flutterを使用し作成。google map APIを使い写真とmapを連携することで、より旅の記憶を深くする。",
     "image": "travel_canvas_image.png",
     "tools": ["flutter", "firebase", "gcp"],
     "detailLink": "https://myprofilepoliteku03.framer.ai/travel_canvas",
