@@ -1,4 +1,4 @@
-import { MainComponent } from "./main/page";
+import { MainComponent } from "./mainPage/page";
 
 export default function Page() {
   return (
