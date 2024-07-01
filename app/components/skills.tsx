@@ -1,4 +1,3 @@
-import { StrengthsFinder } from "@/app/components/strengthsFinder";
 import Image from "next/image";
 
 export const Skills = () => {

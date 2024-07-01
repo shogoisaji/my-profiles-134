@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Portfolio } from "../components/portfolio";
 import { Contact } from "../components/contact";
