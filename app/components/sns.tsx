@@ -2,9 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const Sns = (props: { iconSize: number; gridCount: number }) => {
-  // grid 2 or 4
   const gridClass = `grid ${
-    props.gridCount === 2 ? "grid-cols-2" : "grid-cols-4"
+    props.gridCount === 2 ? "grid-cols-2" : "grid-cols-5"
   } gap-4`;
   return (
     <div className="flex flex-col">
@@ -45,19 +44,16 @@ export const Sns = (props: { iconSize: number; gridCount: number }) => {
             height={props.iconSize}
           />
         </Link>
+        <Link href="https://shogoisaji.github.io/ui_playground_134/">
+          <Image
+            src="/images/playground.png"
+            className="hover:rotate-6 hover:scale-110 "
+            alt="playground"
+            width={props.iconSize}
+            height={props.iconSize}
+          />
+        </Link>
       </div>
-      <Link
-        href="https://shogoisaji.github.io/ui_playground_134/"
-        className="w-full flex justify-center mt-4"
-      >
-        <Image
-          src="/images/playground.png"
-          className="hover:rotate-6 hover:scale-110 "
-          alt="rive"
-          width={props.iconSize * 4}
-          height={props.iconSize}
-        />
-      </Link>
     </div>
   );
 };

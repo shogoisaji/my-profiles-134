@@ -1,47 +1,34 @@
-import type { Metadata } from 'next'
-import {
-    Inter,
-    Kanit,
-    Kiwi_Maru,
-    Kosugi,
-    Shippori_Antique_B1,
-} from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next";
+import { Kanit } from "next/font/google";
+import "./globals.css";
 
-// const kosugi = Kosugi({ weight: '400', subsets: ['cyrillic'] })
-// const inter = Inter({ subsets: ['latin'] })
-// const kiwamaru = Kiwi_Maru({ weight: '400', subsets: ['latin'] })
-// const shipporiAntique = Shippori_Antique_B1({
-//     weight: '400',
-//     subsets: ['latin'],
-// })
-const kanit = Kanit({ weight: ['400', '700', '900'], subsets: ['latin'] })
+const kanit = Kanit({ weight: ["400", "700", "900"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  title: "shogo's portfolio",
+  description: "This page is shogo's portfolio.",
+  keywords: "shogoisaji, 134, shogo, isaji, portfolio",
+  openGraph: {
+    type: "website",
+    url: "https://isaji134.com", //deployURL,
     title: "shogo's portfolio",
-    description: "This page is shogo's portfolio.",
-    keywords: 'shogoisaji, 134, shogo, isaji, portfolio',
-    openGraph: {
-        type: 'website',
-        url: 'https://isaji134.com', //deployURL,
-        title: "shogo's portfolio",
-        description: "shogo's portfolio",
-        images: [
-            {
-                url: 'https://isaji134.com/images/portfolio_image.pnp', //imageURL,
-            },
-        ],
-    },
-}
+    description: "shogo's portfolio",
+    images: [
+      {
+        url: "https://isaji134.com/images/portfolio_image.pnp", //imageURL,
+      },
+    ],
+  },
+};
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode
+  children: React.ReactNode;
 }>) {
-    return (
-        <html lang="jp">
-            <body className={kanit.className}>{children}</body>
-        </html>
-    )
+  return (
+    <html lang="jp">
+      <body className={kanit.className}>{children}</body>
+    </html>
+  );
 }

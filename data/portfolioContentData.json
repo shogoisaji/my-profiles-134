@@ -74,7 +74,7 @@
   {
     "title": "BookRental",
     "subtitle": "書籍レンタルシステム",
-    "description": "Laravelを使用し作成。管理者のみ書籍を登録を行える。一覧より書籍を選択し、レンタル、コメントの入力ができる。DBはsupabaseのRDBを使用した。作成期間:3日",
+    "description": "Laravelを使用し作成。管理者のみ書籍を登録を行える。一覧より書籍を選択し、レンタル、コメントの入力ができる。DBはsupabaseのRDBを使用した。",
     "image": "bms_image.png",
     "tools": ["laravel", "supabase"],
     "detailLink": "https://github.com/shogoisaji/BookMamagementSystem/tree/main#readme",
