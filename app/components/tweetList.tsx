@@ -1,4 +1,3 @@
-import React from "react";
 import { Tweet } from "react-tweet";
 import { components } from "@/app/components/tweetComponents";
 import TweetListData from "@/data/tweetList.json";
