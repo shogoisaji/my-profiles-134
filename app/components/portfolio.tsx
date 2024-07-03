@@ -6,7 +6,7 @@ export const Portfolio = () => {
   return (
     <div className="bg-background rounded-lg shadow-sm md:p-0 p-4">
       <h2 className="text-2xl text-custom-orange font-bold mb-4">My Apps</h2>
-      <div className="grid gap-8">
+      <div className="grid gap-8 grid-cols-1 xl:grid-cols-2">
         {ContentData.map((data: PortfolioContent) => (
           <div
             key={data.title}
@@ -26,17 +26,19 @@ export const PortfolioContent = ({
   content: PortfolioContent;
 }) => {
   return (
-    <div className="border md:p-6 p-4 rounded-2xl shadow-sm">
+    <div className="w-full border md:p-6 p-4 rounded-2xl">
       <Image
         src={`/images/${content.image}`}
         alt="Profile Photo"
         className="md:rounded-2xl rounded-xl"
-        width={1000}
-        height={1000}
+        width={2000}
+        height={2000}
       />
       <div className="md:px-2 px-0 py-4">
         <h3 className="text-2xl font-bold">{content.title}</h3>
-        <p className="text-gray-300">{content.description}</p>
+        <p className="text-gray-300 w-full xl:h-20 overflow-hidden text-ellipsis">
+          {content.description}
+        </p>
         <div className="flex items-center gap-2 mt-4">
           {content.tools.map((tool: string) => (
             <div

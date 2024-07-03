@@ -27,9 +27,17 @@ export const StrengthsFinder = () => {
         Strengths Finder 2.0
       </div>
       <div className="w-full sm:w-1/2 md:w-full">{ImageList}</div>
-      <div className="mt-4 ml-2 hover:text-orange-300 hover:underline">
+      <div className="mt-4 hover:text-orange-300 hover:underline">
         <Link href="https://www.gallup.com/cliftonstrengths/ja/254039/strengthsfinder.aspx">
-          Strengths Finderとは？
+          <div className="flex flex-row">
+            <svg className="w-5 h-5 mr-2 md:ml-2 ml-0">
+              <path
+                fill="currentColor"
+                d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+              />
+            </svg>
+            Strengths Finderとは？
+          </div>
         </Link>
       </div>
     </>
