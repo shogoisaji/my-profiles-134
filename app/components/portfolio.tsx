@@ -36,7 +36,7 @@ export const PortfolioContent = ({
       />
       <div className="md:px-2 px-0 py-4">
         <h3 className="text-2xl font-bold">{content.title}</h3>
-        <p className="text-gray-300 w-full xl:h-20 overflow-hidden text-ellipsis">
+        <p className="text-gray-300 w-full xl:h-24 2xl:h-20 overflow-hidden text-ellipsis">
           {content.description}
         </p>
         <div className="flex items-center gap-2 mt-4">
