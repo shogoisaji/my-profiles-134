@@ -24,7 +24,7 @@ export const MainComponent = () => {
               <h1 className="text-2xl text-custom-orange font-bold">
                 Shogo Isaji
               </h1>
-              <p className="text-lg">App Engineer</p>
+              <p className="text-lg">App Dev Engineer</p>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@ export const MainComponent = () => {
             About Me
           </h2>
           <p className="">
-            私はモバイル・Webアプリの開発を行うエンジニアクリエイターです。素晴らしいプロダクトを創造できるように日々探求してます。以前は製品設計に携わり、お客様に最高の価値を提供できるように心がけていました。現在はより多くの人に喜んでもらえるプロダクトを作るため、創造を繰り返している。
+            私はモバイル・Webアプリの開発を行うエンジニアクリエイターです。素晴らしいプロダクトを創造するため日々探求してます。以前は製品設計に携わり、お客様に最高の価値を提供できるように心がけていました。現在はより多くの人に喜んでもらえるプロダクトを作るため、創造を繰り返している。
           </p>
           <hr className="my-4" />
           <Skills />
