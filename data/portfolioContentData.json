@@ -4,7 +4,7 @@
     "subtitle": "単語学習アプリ",
     "description": "エビングハウスの忘却曲線に基づき、復習タイミングを適切に管理し、単語の定着を促します。単語登録時にはAIを使用し、翻訳、例文の提示、例文の翻訳、タイポのチェックを行います。",
     "image": "worbbing.png",
-    "tools": ["flutter"],
+    "tools": ["flutter", "typescript", "hono"],
     "detailLink": "https://worbbing.vercel.app/",
     "storeLink": "https://apps.apple.com/jp/app/worbbing/id6504094847"
   },
