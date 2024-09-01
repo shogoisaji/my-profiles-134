@@ -1,5 +1,14 @@
 [
   {
+    "title": "DiceThree",
+    "subtitle": "サイコロアプリ",
+    "description": "このダイスゲームアプリで、友人や家族と手軽に勝負を楽しもう！簡単な操作でサクッと対戦が可能。シンプルなルールで誰でもすぐにプレイ開始できます。",
+    "image": "dice_ogp.png",
+    "tools": ["flutter"],
+    "detailLink": "https://dicethree.vercel.app/",
+    "storeLink": "https://apps.apple.com/jp/app/dicethree/id6651824692"
+  },
+  {
     "title": "Worbbing",
     "subtitle": "単語学習アプリ",
     "description": "エビングハウスの忘却曲線に基づき、復習タイミングを適切に管理し、単語の定着を促します。単語登録時にはAIを使用し、翻訳、例文の提示、例文の翻訳、タイポのチェックを行います。",
